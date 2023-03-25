@@ -46,9 +46,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return String.format("{%s ,R$ %.2f}", this.name, this.price);
     }
 }
