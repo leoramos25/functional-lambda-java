@@ -17,8 +17,8 @@ public class Main {
         list.add(new Product("Mouse", 50.00));
         list.add(new Product("HD Case", 80.00));
 
-        //This list receive a predicate as parameter
-        list.removeIf(p -> p.getPrice() >= 100.00);
+        //This list receive a consumer as parameter
+        list.forEach(product -> product.setPrice(product.getPrice() * 1.1));
 
         System.out.printf(list.toString());
     }
